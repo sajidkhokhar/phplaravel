@@ -1,0 +1,20 @@
+@foreach($users as user )
+<tr>{{$user['id']}}</tr>
+@endforeach
+
+user controller
+function adddata(request $rs){
+    var name=$rs->input('username');
+    DB::insert(insert into user(name) value(?),[name]);
+
+    return view('display')
+}
+
+webphp
+route::get('/display','usercontroller@adddata')
+
+body-form<action method -table -tr -<td> <input type=text 
+
+
+<input type="text" name="username">
+<button type="submit">login</button>
